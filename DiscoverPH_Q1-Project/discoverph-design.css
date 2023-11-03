@@ -446,8 +446,9 @@ body {
     display: flex;
     width: min-content;
 }
-#region-BARMM {
-    margin-left: 25vh;
+#region-CAR {
+    margin-left: 20vh;
+    margin-right: 10vh;
 }
 
 hr {
