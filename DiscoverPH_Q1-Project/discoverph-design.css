@@ -1,0 +1,479 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    margin: 0;
+    animation: fadeInAnimation ease 0.75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #000; 
+    padding: 20px 0;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+@keyframes slideInFromUp {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.logo img {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin-left: 100px;
+    transition: 0.3s;
+}
+.logo img:hover {
+    scale: 1.20;
+}
+
+.back-drop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.back-drop img {
+    margin-left: 100px;
+    width: 40vh; 
+    height: auto; 
+}
+
+.nav-links a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: large;
+    color: black;
+    padding: 10px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    padding-bottom: 3px;
+    border-bottom: 3px solid black;
+    padding-top: 3px;
+    border-top: 1px solid black;
+    border-radius: 10px;
+    font-size: larger;
+}
+
+#current-page {
+    padding-bottom: 3px;
+    border-bottom: 3px solid black;
+    padding-top: 3px;
+    border-top: 1px solid black;
+    border-radius: 10px;
+}
+
+@font-face {
+    font-family: 'neue_machinaultrabold';
+    src: url('./fonts/neuemachina-ultrabold-webfont.woff2') format('woff2'),
+         url('./fonts/neuemachina-ultrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.welcome-message {
+    font-family: 'neue_machinaultrabold';
+    margin-left: 10vh;
+    font-size: xx-large;
+    z-index: 10000;
+    color: white;
+    animation: slideInFromUp ease 1s;
+}
+.welcome-message h2{
+    margin-top: 50px;
+    margin-bottom: 55px;
+    z-index: 10000000;
+}
+.welcome-message h1{
+    margin-top: -30px;
+}
+#yellow-ph {
+    color: yellow;
+    padding-left: 10px;
+}
+#blue-ph {
+    color: blue;
+}
+#red-ph {
+    color: red;
+    padding-right: 10px;
+}
+.welcome-ph {
+    display: inline-block;
+    position: relative;
+    z-index: 100000;
+}
+
+.small-intro {
+    margin-top: -95vh;
+}
+.medium-intro {
+    margin-top: -90vh;
+}
+.large-intro {
+    margin-top: -87vh;
+}
+
+.welcome-ph::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px yellow, 0 0 20px blue, 0 0 30px red;
+    border-radius: 5px;
+    z-index: -1;
+    transform: translateY(-35%);
+}
+
+.home-img img {
+    width: 50%;
+    margin-top: -92.5vh;
+    margin-left: 104vh;
+    border-left: solid 3px black;
+    border-bottom: solid 6px black;
+    z-index: 3000000000000;
+    position: absolute;
+}
+.small-img img {
+    height: 87vh;
+    margin-left: 105vh;
+    margin-top: -92.7vh;
+}
+.medium-img img {
+    height: 89vh;
+}
+.large-img img {
+    height: 91vh;
+}
+
+#home-vid {
+    width: auto;
+    position: relative;
+    z-index: -1;
+    height: 92vh;
+    margin-left: -30vh;
+}
+
+.intro-msg p {
+    margin-top: -35px;
+    margin-left: 8vh;
+    white-space: pre-line;
+    text-align: justify;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    animation: slideInFromUp ease 1s;
+}
+
+.small-font {
+    font-size: x-large;
+}
+.medium-font {
+    font-size: 30px;
+}
+.large-font {
+    font-size: xx-large;
+}
+
+#get-started-button {
+    border: none;
+    margin-bottom: 28vh;
+    margin-left: 35vh;
+    color: white;
+    background: transparent;
+    padding: 5px;
+    font-size: large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+    border-bottom: 1px solid white;
+    animation: slideInFromUp ease 1s;
+}
+#get-started-button:hover {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.overview-grid {
+    margin-left: 15vh;
+}
+
+.overview-item {
+    display: inline-block; 
+    width: 70%;
+    text-decoration: none;
+    text-align: center;
+    font-size: x-large;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    margin-bottom: 50px;
+}
+.overview-item h2 {
+    font-size: xx-large;
+    font-family: 'neue_machinaultrabold';
+}
+
+#overview-title {
+    background-color: white;
+    padding: 1vh;
+    border-radius: 10px;
+}
+
+#regions-overview {
+    border: 3px solid #000080;
+    background-image: url(https://i.natgeofe.com/n/8632bc0a-6c1c-4f6c-80da-7aeda6ec47c5/Archipelago%20Philippines_3x2.jpg);
+    background-size: cover;
+}
+#history-overview {
+    border: 3px solid #964B00;
+    background-image: url(https://a-static.besthdwallpaper.com/vigan-city-traveling-north-of-the-philippines-ilocos-sur-wallpaper-3840x2160-90621_54.jpg);
+    background-size: cover;
+}
+#presidents-overview {
+    border: 3px solid red;
+    background-image: url(https://pixelz.cc/wp-content/uploads/2018/11/philippines-flag-uhd-4k-wallpaper.jpg);
+    background-size: cover;
+}
+#wonders-overview {
+    border: 3px solid green;
+    background-image: url(https://wallpapers.com/images/featured/philippines-ihlddnrpbpikfpwc.jpg);
+    background-size: cover;
+}
+
+.overview-image img {
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+    border-radius: 10px;
+    float: left;
+    margin-right: 20px;
+}
+
+.overview-description {
+    padding: 5px;
+    text-align: justify;
+    background-color: #ADD8E6;
+    overflow: hidden;
+    font-size: larger;
+    border-radius: 10px;
+    color: #000080;
+}
+#history-desc {
+    color: #964B00;
+}
+#presidents-desc {
+    color: red;
+}
+#wonders-desc {
+    color: green;
+}
+
+.home-buttons {
+    border: none;
+    margin-top: 5vh;
+    margin-right: 35vh;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    background: transparent;
+    transition: 0.3s;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 5px;
+}
+.home-buttons:hover {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+}
+.navigation-buttons button {
+    font-size: x-large;
+    padding: 1vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.navigation-buttons h1 {
+    font-size: xx-large;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    margin-top: 1vh;
+}
+.navigation-buttons button:hover {
+    box-shadow: 0 0 10px yellow, 0 0 20px blue, 0 0 30px red;
+    border-radius: 10px;
+}
+#navigation-button-page {
+    font-weight: bold;
+}
+
+.footer {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    line-height: 0.3;
+    border: solid 3px black;
+    background-image: url(https://images.wallpapersden.com/image/download/sea-ocean-water_ZmpmbWiUmZqaraWkpJRsa21lrWloZ2U.jpg);
+    background-size: cover;
+}
+
+#credits {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+
+#regions-header {
+    text-align: center;
+    font-family: 'neue_machinaultrabold';
+    animation: slideInFromLeft ease 1s;
+}
+
+.regions {
+    margin-left: 25vh;
+    margin-right: 20vh;
+    margin-bottom: 5vh;
+}
+
+.regions-content {
+    flex: 1;
+}
+.regions-content img{
+    width: 50vh;
+    height: 300px;
+    border: 1px solid black;
+    animation: slideInFromLeft ease 1s;
+}
+
+.regions-content p{
+    width: 47vh;
+    text-align: justify;
+    font-weight: 400;
+    font-size: large;
+    margin-bottom: 1vh;
+    animation: slideInFromLeft ease 1s;
+}
+.regions-content h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    animation: slideInFromLeft ease 1s;
+}
+
+.learn-more {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    transition: 0.3s;
+    animation: slideInFromLeft ease 1s;
+}
+.learn-more:hover {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: large;
+}
+
+.regions-123 {
+    display: flex;
+}
+.regions-45 {
+    margin-top: 5vh;
+    display: flex;
+}
+.regions-678 {
+    margin-top: 5vh;
+    display: flex;
+}
+.regions-9-10-11 {
+    margin-top: 5vh;
+    display: flex;
+}
+.regions-12-13-NCR {
+    margin-top: 5vh;
+    display: flex;
+}
+.regions-CAR-BARMM {
+    margin-top: 5vh;
+    display: flex;
+    width: min-content;
+}
+#region-BARMM {
+    margin-left: 25vh;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+
+.soon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+.soon img {
+    width: 20vh;
+}
+
+.navigation-buttons img {
+    width: 5vh;
+    margin-top: 2vh;
+    transition: 0.3s;
+}
+.navigation-buttons img:hover {
+    scale: 1.5;
+}
