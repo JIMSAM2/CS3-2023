@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Jim Samuel D. Panaguiton">
+        <meta name="revised" content="11-15-2023">
+    </head>
+    <style>
+        a#firstLink:link {
+            color: white;
+            font-size: x-large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-decoration: none;
+            background-color: rgb(55, 55, 124);
+        }
 
+        a#secondLink:link {
+            color: white;
+            font-size: x-large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-decoration: none;
+            background-color: rgb(14, 137, 125);
+        }
+
+        a#firstLink:visited {
+            color: white;
+            background-color: greenyellow;
+        }
+
+        a#secondLink:visited {
+            color: white;
+            background-color: plum;
+        }
+
+        a#firstLink:hover {
+            color: greenyellow;
+            background-color: turquoise;
+        }
+
+        a#secondLink:hover {
+            color: rgb(0, 255, 0);
+            background-color: blue;
+        }
+
+        a#firstLink:active {
+            color: black;
+            background-color: burlywood;
+        }
+
+        a#secondLink:active {
+            color: black;
+            background-color: brown;
+        }
+
+        #div1 {
+            font-size: x-large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border: 1px solid black;
+            width: 10%;
+            padding-bottom: 9%;
+            margin-top: 2%;
+        }
+
+        #div2 {
+            font-size: x-large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border: 1px solid black;
+            width: 10%;
+            padding-bottom: 9%;
+        }
+
+        #div1:target {
+            color: rgb(249, 174, 83);
+            background-color: rgb(48, 48, 106);
+        }
+
+        #div2:target {
+            color: rgb(243, 180, 102);
+            background-color: rgb(78, 166, 137);
+            border: 10px dotted green;
+        }
+    </style>
+    <body>
+        <a id="firstLink" href="#div1">First Link</a>
+        <a id="secondLink" href="#div2">Second Link</a>
+        <div id="div1">Div 1 here</div>
+        <br>
+        <div id="div2">Div 2 here</div>
+    </body>
+</html>
