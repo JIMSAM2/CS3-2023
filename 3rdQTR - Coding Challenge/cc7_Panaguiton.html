@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>One Time Password </title>
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+	</head>
+	<body onload="generateOTP()">
+        <h1> Final Verification Step </h1>
+        <h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a onclick="generateOTP()" href=""> New OTP </a></h2>
+        <button onclick="verifyOTP()"> Enter the OTP as shown above </button>
+        
+        <script>
+            var OTP;
+            function generateOTP() {
+                OTP = Math.floor(Math.random() * (999999 - 100000 + 1)) + 100000;
+                document.getElementById("otp").innerHTML = OTP;
+            }
+
+            function verifyOTP() {
+                var userOTP = prompt("Enter the 6 digit OTP.");
+                
+                if(userOTP == OTP) {
+                    window.open("https://sites.google.com/view/jims-stories/home");
+                } else {
+                    alert("The OTP you entered is not correct!")
+                    verifyOTP();
+                }
+            }
+        </script>
+    </body>
+</html>

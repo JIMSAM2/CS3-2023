@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 5
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Modified FLAMES </h1>
+
+        <button onclick="flames()">Match Names</button>
+        <h3 id="name"></h3>
+
+        <h4>FLAMES Result:</h4>
+        <h3 id="result"></h3>
+
+        <script>
+            function flames(){
+                let name1 = prompt("Enter name 1.");
+                let name2 = prompt("Enter name 2.");
+
+                //clean user-inputted names.
+                while((name1.includes(" ")) || (name2.includes(" ")) || (/[^a-zA-Z0-9 ]/.test(name1)) || (/[^a-zA-Z0-9 ]/.test(name2))) {
+                    name1 = name1.replace(" ", "");
+                    name2 = name2.replace(" ", "");
+                    name1 = name1.replace(/[^a-zA-Z0-9 ]/, "");
+                    name2 = name2.replace(/[^a-zA-Z0-9 ]/, "");
+                }
+                document.getElementById("name").innerHTML = name1 + " and " + name2;
+
+                let namesLength = (name1 + name2).length;
+                let flameIndex = namesLength % 6;
+                switch(flameIndex) {
+                    case 0:
+                        document.getElementById("result").innerHTML = "S-sweethearts"; //a remainder of 0 is equal to 6th character.
+                        break;
+                    case 1:
+                        document.getElementById("result").innerHTML = "F-friends";
+                        break;
+                    case 2:
+                        document.getElementById("result").innerHTML = "L-lovers";
+                        break;
+                    case 3:
+                        document.getElementById("result").innerHTML = "A-Acquaintances";
+                        break;
+                    case 4:
+                        document.getElementById("result").innerHTML = "M-marriage";
+                        break;
+                    case 5:
+                        document.getElementById("result").innerHTML = "E-enemies";
+                        break;
+                    case 6:
+                        document.getElementById("result").innerHTML = "S-sweethearts";
+                }
+            }
+        </script>
+    </body>
+</html>
