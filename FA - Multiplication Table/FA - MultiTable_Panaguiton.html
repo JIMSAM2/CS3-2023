@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Multiplication Table</title>
+
+    <style>
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+             }
+        }
+
+        h1 {
+            animation: fadeInAnimation ease 1s;
+        }
+
+        #n-rows, #m-columns {
+            text-decoration: underline;
+        }
+
+        table, th, td {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 10px;
+            animation: fadeInAnimation ease 1s;
+            text-align: center;
+        }
+
+        #x {
+            font-size: xx-large;
+            background-color: yellow;
+        }
+
+        .column-numbers, .row-numbers {
+            font-size: x-large;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplication Table: <span id="n-rows"></span> rows, <span id="m-columns"></span> columns.</h1>
+    <h2 id="MultiTable"></h2>
+
+    <script>
+        var n = prompt("Enter number of rows.\n(2 - 10)", 2);
+        //data validation
+        while(n < 2 || n > 10) {
+            if(n < 2) {
+                alert("Number of rows must not be less than 2!");
+                n = prompt("Enter number of rows.\n(2 - 10)", 2);
+            } else {
+                alert("Number of rows must not be greater than 10!");
+                n = prompt("Enter number of rows.\n(2 - 10)");
+            }
+        }
+        var m = prompt("Enter number of colums.\n(2 - 10)", 2);
+        while(m < 2 || m > 10) {
+            if(m < 2) {
+                alert("Number of columns must not be less than 2!");
+                m = prompt("Enter number of columns.\n(2 - 10)", 2);
+            } else {
+                alert("Number of columns must not be greater than 10!");
+                m = prompt("Enter number of columns.\n(2 - 10)");
+            }
+        }
+
+        var MultiTable = "<table>";
+
+        MultiTable += "<tr><td id='x'>x</td>";
+        for (let i = 1; i <= m; i++) {
+            //display column numbers
+            MultiTable += "<td class='column-numbers'>" + i + "</td>";
+        }
+        MultiTable += "</tr>";
+
+        for (let j = 1; j <= n; j++) {
+            MultiTable += "<tr>";
+            //display row numbers
+            MultiTable += "<td class='row-numbers'>" + j + "</td>";
+            for (let k = 1; k <= m; k++) {
+                //calculating and displaying mutlitples
+                MultiTable += "<td>" + k * j + "</td>";
+            }
+            MultiTable += "</tr>";
+        }
+        MultiTable += "</table>";
+
+        document.getElementById("MultiTable").innerHTML = MultiTable;
+        document.getElementById("n-rows").innerHTML = n;
+        document.getElementById("m-columns").innerHTML = m;
+    </script>
+</body>
+</html>
