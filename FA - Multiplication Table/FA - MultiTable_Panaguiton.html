@@ -46,25 +46,25 @@
     <h2 id="MultiTable"></h2>
 
     <script>
-        var n = prompt("Enter number of rows.\n(2 - 10)", 2);
+        var n = prompt("Enter number of rows.\n(2 - 10 rows)", 2);
         //data validation
         while(n < 2 || n > 10) {
             if(n < 2) {
                 alert("Number of rows must not be less than 2!");
-                n = prompt("Enter number of rows.\n(2 - 10)", 2);
+                n = prompt("Enter number of rows.\n(2 - 10 rows)", 2);
             } else {
                 alert("Number of rows must not be greater than 10!");
-                n = prompt("Enter number of rows.\n(2 - 10)");
+                n = prompt("Enter number of rows.\n(2 - 10 rows)");
             }
         }
-        var m = prompt("Enter number of colums.\n(2 - 10)", 2);
+        var m = prompt("Enter number of colums.\n(2 - 10 columns)", 2);
         while(m < 2 || m > 10) {
             if(m < 2) {
                 alert("Number of columns must not be less than 2!");
-                m = prompt("Enter number of columns.\n(2 - 10)", 2);
+                m = prompt("Enter number of columns.\n(2 - 10 columns)", 2);
             } else {
                 alert("Number of columns must not be greater than 10!");
-                m = prompt("Enter number of columns.\n(2 - 10)");
+                m = prompt("Enter number of columns.\n(2 - 10 columns)");
             }
         }
 
