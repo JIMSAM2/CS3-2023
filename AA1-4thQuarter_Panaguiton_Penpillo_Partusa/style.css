@@ -143,6 +143,7 @@ th {
 td {
     font-size: x-large;
     text-align: center;
+    background-color: rgb(238, 238, 203);
 }
 
 p {
