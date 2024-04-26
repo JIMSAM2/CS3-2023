@@ -11,7 +11,7 @@ function addItem(name, num) {
     }
 
     if(itemExists) {
-        alert("Error: That item already exists in the inventory!");
+        alert("Error: Item '" + name + "' already exists in the inventory!");
     } else {
         supply.push({itemName: name, noOfItem: num});
         populateDropdownItem();
