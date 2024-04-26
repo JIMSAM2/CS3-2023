@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Inventory System</title>
+        <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/d00171YN/image-removebg-preview.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1><img src="https://i.postimg.cc/d00171YN/image-removebg-preview.png" alt="Inventory Logo" id="inventory-img1">My Inventory<img src="https://i.postimg.cc/d00171YN/image-removebg-preview.png" alt="Inventory Logo" id="inventory-img2"></h1>
+        <div id="inventoryControls"> 
+            <button onclick="toggleForms(1)" id="addItemBtn" class="inventoryBtn" title="add a new item">Add New Item</button>
+            <div id="forms1">  
+                <form onsubmit="addItem(newIname.value, parseInt(newIquantity.value)); return false;" id="addItemForm">
+                    <label for="newIname">Item name</label><br>
+                    <input type="text" id="newIname" name="Iname" placeholder="Enter item name.."><br>
+                    <label for="newIquantity">No. of item(s)</label><br>
+                    <input type="number" id="newIquantity" name="Iquantity" value="0"><br><br>
+                    <input type="submit" value="Add new item to inventory">
+                    <button type="button" onclick="toggleForms('abort')" class="cancelBtn">Cancel</button>
+                </form>
+            </div>
+
+            <button onclick="toggleForms(2)" id="addNoItemBtn" class="inventoryBtn" title="add stonks">Add Stock</button>
+            <div id="forms2">
+                <form onsubmit="addNoOfItem(InameDropdown_addItem.value, parseInt(addItemIquantity.value)); return false;" id="addNoItemForm">
+                    <label for="InameDropdown_addItem">Item name</label><br>
+                    <select id="InameDropdown_addItem" name="InameDropdown">
+    
+                    </select><br>
+                    <label for="addItemIquantity">No. of item(s) to add</label><br>
+                    <input type="number" id="addItemIquantity" name="Iquantity" value="0"><br><br>
+                    <input type="submit" value="Add item(s) to the supply">
+                    <button type="button" onclick="toggleForms('abort')" class="cancelBtn">Cancel</button>
+                </form>
+            </div>
+
+            <button onclick="toggleForms(3)" id="removeNoItemBtn" class="inventoryBtn" title="remove stonks">Remove Stock</button>
+            <div id="forms3">
+                <form onsubmit="subNoOfItem(InameDropdown_removeItem.value, parseInt(removeItemIquantity.value)); return false;" id="removeNoItemForm">
+                    <label for="InameDropdown_removeItem">Item name</label><br>
+                    <select id="InameDropdown_removeItem" name="InameDropdown">  
+    
+                    </select><br>
+                    <label for="removeItemIquantity">No. of item(s) to remove</label><br>
+                    <input type="number" id="removeItemIquantity" name="Iquantity" value="0"><br><br>
+                    <input type="submit" value="Remove item(s) from the supply">
+                    <button type="button" onclick="toggleForms('abort')" class="cancelBtn">Cancel</button>
+                </form>
+            </div>
+
+            <button onclick="toggleForms(4)" id="removeItemBtn" class="inventoryBtn" title="delete an item">Delete Item</button>
+            <div id="forms4">
+                <form onsubmit="removeItem(InameDropdown_delete.value); return false;" id="removeItemForm">
+                    <label for="InameDropdown_delete">Item name</label><br>
+                    <select id="InameDropdown_delete" name="InameDropdown">
+    
+                    </select><br><br>
+                    <input type="submit" value="Remove item from inventory">
+                    <button type="button" onclick="toggleForms('abort')" class="cancelBtn">Cancel</button>
+                </form>
+            </div>
+            
+            <button onclick="displayItems(); stonksTable.style.display = 'block'" id="displayInventoryBtn" class="inventoryBtn" title="display the inventory">Display Inventory</button>
+        </div>
+        <div id="stonksTable">
+
+        </div>
+          
+        <p>&copy; 2024 Panaguiton, Penpillo, Partusa</p>
+
+        <script src="script.js"></script>
+    </body>
+</html>
