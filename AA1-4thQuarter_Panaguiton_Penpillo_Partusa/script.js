@@ -38,7 +38,7 @@ function subNoOfItem(name, num) {
         if(supply[i]["itemName"] == name) {
             var currentStock = supply[i]["noOfItem"];
             if(num > currentStock) {
-                alert("Error: Item supply cannot be negative!");
+                alert("Error: You can't remove more than " + currentStock + " supplies from item '" + name + "'!");
                 break;
             } else {
                 var finalStock = currentStock - num;
