@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    color: #333;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#level-display, #highest-level-display, #message-display {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#message-display {
+    visibility: hidden;
+    transition: visibility 0.3s, background-color 0.3s;
+}
+
+.message-correct {
+    background-color: rgba(0, 255, 0, 0.7);
+    color: lightgreen;
+    font-weight: bolder;
+}
+
+.message-fail {
+    background-color: rgba(255, 0, 0, 0.7);
+    color: red;
+    font-weight: bolder;
+}
+
+#game-board {
+    display: grid;
+    gap: 5px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item {
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.grid-item.active, .grid-item.clicked {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #6c63ff;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #574b90;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+p {
+    position: fixed;
+    bottom: 0;
+    left: 50;
+    margin: 0;
+    font-size: small;
+}
